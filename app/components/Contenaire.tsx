@@ -5,6 +5,6 @@ type ContenaireProps = {
 }
 export default function Contenaire({ children, className }: ContenaireProps) {
     return (
-        <div className={`mx-auto max-w-[80rem] px-5 md:px-10 lg:px-20 ${className ?? ""}`}>{children}</div>
+        <div className={`mx-auto max-w-7xl px-5 md:px-10 lg:px-20 ${className ?? ""}`}>{children}</div>
     )
 }
