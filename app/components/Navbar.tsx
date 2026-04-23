@@ -8,7 +8,7 @@ export default function Navbar() {
         { name: "Contact", href: "#" }
     ]
   return (
-    <nav className="border-b border-gray-50  w-full h-20">
+    <nav className="border-b sticky top-0 z-30 border-gray-600 bg-[#000420] w-full h-20">
       <Contenaire className="flex items-center justify-between py-5">
         <Link href={"/"} className="text-2xl font-bold">LGC</Link>
         <ul className="flex items-center justify-evenly gap-5">
