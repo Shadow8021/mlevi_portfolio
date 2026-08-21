@@ -13,8 +13,8 @@ export default function Navbar() {
          <a className="logo" href="#top" aria-label="Retour en haut" > 
           <div className="flex flex-col">
             <Image src={"/gregg.png"} alt="logo" width={10000} height={1000} className="w-18 "/>
-           <span className="text-lg">G&apos;artial Oyaga</span>
-           <span className="text-sm">FULL STACk INGENEER</span>
+           <span className="text-lg hidden">G&apos;artial Oyaga</span>
+           <span className="text-sm hidden">FULL STACk INGENEER</span>
           </div>
           </a>
          <div className={`nav-links ${menuOpen ? "is-open" : ""}`}>
