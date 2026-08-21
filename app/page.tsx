@@ -2,6 +2,9 @@
 import Image from "next/image";
 import Timeline from "./components/Timeline";
 import { ContactCard } from "./components/conatct/contact-card";
+import Services from "./components/services";
+
+
 const projects = [
   {
     number: "01",
@@ -87,11 +90,10 @@ export default function Home() {
         <div className="skills-layout"><div className="skills-intro"><h2>Une stack solide,<br /><em>sans dogme.</em></h2><p>Je choisis la technologie qui sert le mieux le produit, la qualité d&apos;expérience et l&apos;équipe qui va le faire vivre.</p></div><div className="skill-groups"><div className="skill-group"><span className="skill-index">01</span><div><h3>Frontend</h3><p>React · Next.js · TypeScript · Tailwind CSS · Framer Motion</p></div></div><div className="skill-group"><span className="skill-index">02</span><div><h3>Backend</h3><p>Node.js · NestJS · PostgreSQL · REST · GraphQL</p></div></div><div className="skill-group"><span className="skill-index">03</span><div><h3>Mobile &amp; outils</h3><p>React Native · Expo · Git · Docker · AWS · Figma</p></div></div></div></div>
       </section>
 
-      <section className="services section-wrap" id="services">
-        <div className="section-heading"><p className="section-label">04 / Ce que je fais</p><span>Une approche, plusieurs terrains de jeu</span></div>
-        <div className="service-grid"><div><span className="service-index">01</span><h3>Web apps</h3><p>Des produits web robustes, de l&apos;API à l&apos;interface, pensés pour durer et grandir.</p></div><div><span className="service-index">02</span><h3>Mobile</h3><p>Des applications iOS et Android fluides qui trouvent naturellement leur place dans la vie des gens.</p></div><div><span className="service-index">03</span><h3>Direction technique</h3><p>Architecture, choix de stack et accompagnement pour avancer avec moins de friction.</p></div></div>
+      
+      <section id="services">
+        <Services/>
       </section>
-
       <section className="contact section-wrap" id="contact">
         <p className="section-label">05 / Contact</p>
         <ContactCard/>

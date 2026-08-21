@@ -14,7 +14,7 @@ const serves = [
         descript:"Architecture, choix de stack et accompagnement pour avancer avec moins de friction."
     }
 ]
-export default function services() {
+export default function Services() {
   return (
     <section className="services section-wrap" id="services">
         <div className="section-heading">
@@ -23,12 +23,11 @@ export default function services() {
         </div>
 
         <div className="service-grid">
-            
             {serves.map((el)=>(
-               <div key={el.id}>
-               <span className="service-index">03</span>
-                <h3>Direction technique</h3>
-                <p>Architecture, choix de stack et accompagnement pour avancer avec moins de friction.</p>
+            <div key={el.id}>
+               <span className="service-index">{el.id}</span>
+                <h3>{el.nom}</h3>
+                <p>{el.descript}</p>
             </div> 
             ))}
         </div>
