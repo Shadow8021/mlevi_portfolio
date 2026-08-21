@@ -4,7 +4,7 @@ import Timeline from "./components/Timeline";
 import { ContactCard } from "./components/conatct/contact-card";
 import Services from "./components/services";
 import NetworkAnimation from "./components/ui/anime";
-
+import TextType from "./components/ui/TextType";
 
 const projects = [
   {
@@ -41,7 +41,23 @@ export default function Home() {
       <section className="hero section-wrap" id="top">
         <div className="hero-copy">
           <p className="eyebrow"><span className="status-dot" /> Disponible pour de nouveaux projets</p>
-          <h1>Je construis des produits <em>digitaux</em> qui comptent.</h1>
+          <div className="min-h-48 ">
+            <h1 className="">
+          
+            <em>
+                <TextType 
+                text={["Je construis des produits", "digitaux qui comptent", "Happy coding!"]}
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor
+                cursorCharacter="_"
+                deletingSpeed={50}
+                cursorBlinkDuration={0.5}
+              />
+            </em>
+          </h1>
+          </div>
+          
           <p className="hero-intro">Développeur full-stack spécialisé dans les expériences web et mobiles. Je transforme les idées ambitieuses en outils simples, rapides et mémorables.</p>
           <div className="hero-actions">
             <a className="button button-dark" href="#work">Voir mes projets <span>↓</span></a>
