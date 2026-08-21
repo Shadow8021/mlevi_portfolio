@@ -1,27 +1,25 @@
+"use client"
+import { useState } from "react"
 import Contenaire from "./Contenaire"
 import Link from "next/link"
+
 export default function Navbar() {
-    const items = [
-        { name: "Home", href: "#" },
-        { name: "About", href: "#" },
-        { name: "Services", href: "#" },
-        { name: "Contact", href: "#" }
-    ]
+  const navItems = ["Work", "Skills", "Services", "About", "Contact"];  
+  const [menuOpen, setMenuOpen] = useState(false)
+    
   return (
     <nav className="border-b sticky top-0 right-0 z-50 border-gray-600 bg-[#000420] w-full h-20">
       <Contenaire className="flex items-center justify-between py-5">
-        <Link href={"/"} className="text-2xl font-bold">LGC</Link>
-        <ul className="flex items-center justify-evenly gap-5">
-            <Contenaire className="flex justify-evenly w-150 gap-2">
-                {items.map((item) => (
-                <li key={item.name}>
-                    <Link href={item.href} className="text-gray-600 font-bold text-md transition ease-in-out hover:text-white">
-                        {item.name}
-                    </Link>
-                </li>
-            ))}
-            </Contenaire>
-        </ul>
+         <a className="logo" href="#top" aria-label="Retour en haut">LM<span>.</span></a>
+        <div className={`nav-links ${menuOpen ? "is-open" : ""}`}>
+          {navItems.map((item) => (
+            <Link key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{item}</Link>
+          ))}
+        </div>
+        <a className="nav-cta" href="#contact">Discutons <span>↗</span></a>
+        <button className="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
+          <span /> <span />
+        </button>
       </Contenaire>
     </nav>
   )
