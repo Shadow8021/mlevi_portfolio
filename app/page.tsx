@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-
+import Timeline from "./components/Timeline";
 const projects = [
   {
     number: "01",
@@ -102,6 +102,83 @@ export default function Home() {
       </section>
 
       <section className="contact section-wrap" id="contact"><p className="section-label">05 / Contact</p><div className="contact-main"><h2>Une idée en tête ?<br /><em>Faisons-la exister.</em></h2><a className="contact-email" href="mailto:hello@lamine.dev">hello@lamine.dev <span>↗</span></a></div><div className="contact-footer"><span>© 2025 Lamine M.</span><span>Made with care & curiosity</span><div className="socials"><a href="https://github.com" aria-label="GitHub">GH</a><a href="https://linkedin.com" aria-label="LinkedIn">IN</a></div></div></section>
+      <div
+      className="min-h-screen w-full overflow-auto bg-papyrus"
+      style={{ backgroundColor: "#1a1a2e" }}
+    >
+      <header className="relative px-4 py-8 text-center">
+        <div className="absolute inset-0 overflow-hidden">
+          <div
+            className="absolute left-1/4 top-0 h-32 w-32 rounded-full opacity-10"
+            style={{
+              background:
+                "radial-gradient(circle, #d4af37 0%, transparent 70%)",
+            }}
+          />
+          <div
+            className="absolute right-1/4 top-10 h-24 w-24 rounded-full opacity-10"
+            style={{
+              background:
+                "radial-gradient(circle, #d4af37 0%, transparent 70%)",
+            }}
+          />
+        </div>
+
+        <div
+          className="relative animate-fade-in"
+          style={{ animationDelay: "0.1s" }}
+        >
+          <div className="mb-4 flex justify-center">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              className="text-amber-400"
+              aria-hidden="true"
+            >
+              <circle
+                cx="30"
+                cy="30"
+                r="25"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+              <path
+                d="M30 10 L30 50 M10 30 L50 30"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                opacity="0.5"
+              />
+              <circle
+                cx="30"
+                cy="30"
+                r="8"
+                fill="currentColor"
+                opacity="0.3"
+              />
+              <circle cx="30" cy="30" r="3" fill="currentColor" />
+            </svg>
+          </div>
+
+          <h1 className="mb-2 font-cinzel text-3xl font-bold tracking-wider text-[#d4af37] md:text-4xl">
+            Civilisations Anciennes
+          </h1>
+
+          <p className="font-crimson text-lg italic text-[#c9a959]">
+            3000 av. J.-C. — 500 apr. J.-C.
+          </p>
+        </div>
+      </header>
+
+      <Timeline />
+
+      <footer className="py-6 text-center">
+        <p className="font-crimson text-sm text-[#8b7355]">
+          📜 Cliquez sur les cartes pour découvrir plus de détails
+        </p>
+      </footer>
+    </div>
     </main>
   );
 }
