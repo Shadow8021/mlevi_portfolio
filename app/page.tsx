@@ -3,6 +3,7 @@ import Image from "next/image";
 import Timeline from "./components/Timeline";
 import { ContactCard } from "./components/conatct/contact-card";
 import Services from "./components/services";
+import NetworkAnimation from "./components/ui/anime";
 
 
 const projects = [
@@ -172,6 +173,7 @@ export default function Home() {
       </header>
 
       <Timeline />
+      <NetworkAnimation />
     </div>
     </main>
   );

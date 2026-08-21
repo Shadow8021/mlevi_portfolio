@@ -11,19 +11,19 @@ const CARD_FADE_MASK =
   "radial-gradient(ellipse 90% 110% at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.92) 40%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.4) 90%, rgba(0,0,0,0.15) 100%)";
 const socials=[{
   internal: false,
-  href: "https://www.linkedin.com/in/martial-oyaga/",
+  href: "https://www.linkedin.com/in/gregor-martial-oyaga-5779b9311/",
   label: "LinkedIn",
   lucideIcon: FaLinkedinIn  
 },
 {
   internal: false,
-  href: "https://www.facebook.com/martial.oyaga",
+  href: "https://www.facebook.com/gregoroyaga3.0/",
   label: "Facebook",
   lucideIcon: FaFacebookF
 },
 {
   internal: false,
-  href: "mailto:hello@example.com",
+  href: "mailto:gregoyaga@gmail.com",
   label: "Email",
   lucideIcon: Mail
 }
