@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Timeline from "./components/Timeline";
+import { ContactCard } from "./components/conatct/contact-card";
 const projects = [
   {
     number: "01",
@@ -61,30 +62,22 @@ export default function Home() {
         <div className="section-heading"><p className="section-label">02 / Projets sélectionnés</p><span>Une sélection récente — 2023 / 2025</span></div>
         <div className="project-grid">
           {projects.map((project) => (
-
-<div key={project.number} className="card shadow-sm">
-  <span className="project-number">{project.number}</span>
-  <figure className={`project-art ${project.color}`}>
-    <span>{project.title.slice(0, 1)}</span>
-  </figure>
-  <div className="card-body">
-    <div className="project-content">
-                <p className="project-type">{project.type}</p>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="tags">{project.tags.map((tag) =>( 
-                  <span key={tag}>{tag}</span>))}
-                </div>
+            <div key={project.number} className="card shadow-sm">
+              <span className="project-number">{project.number}</span>
+              <figure className={`project-art ${project.color}`}>
+                <span>{project.title.slice(0, 1)}</span>
+              </figure>
+              <div className="card-body">
+                <div className="project-content">
+                    <p className="project-type">{project.type}</p>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                    <div className="tags">{project.tags.map((tag) =>( 
+                    <span key={tag}>{tag}</span>))}
+                    </div>
+                  </div>
               </div>
-   
-  </div>
-</div>
-
-
-
-
-
-
+            </div>
           ))}
         </div>
       </section>
@@ -99,11 +92,18 @@ export default function Home() {
         <div className="service-grid"><div><span className="service-index">01</span><h3>Web apps</h3><p>Des produits web robustes, de l&apos;API à l&apos;interface, pensés pour durer et grandir.</p></div><div><span className="service-index">02</span><h3>Mobile</h3><p>Des applications iOS et Android fluides qui trouvent naturellement leur place dans la vie des gens.</p></div><div><span className="service-index">03</span><h3>Direction technique</h3><p>Architecture, choix de stack et accompagnement pour avancer avec moins de friction.</p></div></div>
       </section>
 
-      <section className="contact section-wrap" id="contact"><p className="section-label">05 / Contact</p><div className="contact-main"><h2>Une idée en tête ?<br /><em>Faisons-la exister.</em></h2><a className="contact-email" href="mailto:hello@lamine.dev">hello@lamine.dev <span>↗</span></a></div><div className="contact-footer"><span>© 2025 Lamine M.</span><span>Made with care & curiosity</span><div className="socials"><a href="https://github.com" aria-label="GitHub">GH</a><a href="https://linkedin.com" aria-label="LinkedIn">IN</a></div></div></section>
-      <div
-      className="min-h-screen w-full overflow-auto bg-papyrus"
-      style={{ backgroundColor: "#1a1a2e" }}
-    >
+      <section className="contact section-wrap" id="contact">
+        <p className="section-label">05 / Contact</p>
+        <ContactCard/>
+      </section>
+      
+      
+      
+      
+      
+      
+      
+      <div className="min-h-screen w-full overflow-auto bg-papyrus" style={{ backgroundColor: "#1a1a2e" }}>
       <header className="relative px-4 py-8 text-center">
         <div className="absolute inset-0 overflow-hidden">
           <div
@@ -170,12 +170,6 @@ export default function Home() {
       </header>
 
       <Timeline />
-
-      <footer className="py-6 text-center">
-        <p className="font-crimson text-sm text-[#8b7355]">
-          📜 Cliquez sur les cartes pour découvrir plus de détails
-        </p>
-      </footer>
     </div>
     </main>
   );
