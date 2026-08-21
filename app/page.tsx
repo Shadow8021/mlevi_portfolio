@@ -162,11 +162,11 @@ export default function Home() {
           </div>
 
           <h1 className="mb-2 font-cinzel text-3xl font-bold tracking-wider text-[#d4af37] md:text-4xl">
-            Civilisations Anciennes
+            Parcours full-stack
           </h1>
 
           <p className="font-crimson text-lg italic text-[#c9a959]">
-            3000 av. J.-C. — 500 apr. J.-C.
+            2014 — aujourd&apos;hui · 12 ans d&apos;expérience
           </p>
         </div>
       </header>

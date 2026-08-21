@@ -2,15 +2,17 @@ import { useMemo, useState } from "react";
 import { events } from "../data/events";
 
 const filters = [
-  { id: "all", label: "🌍 Toutes" },
-  { id: "egypt", label: "🏛️ Égypte" },
-  { id: "greece", label: "🏺 Grèce" },
-  { id: "rome", label: "⚔️ Rome" },
+  { id: "all", label: "✦ Toutes" },
+  { id: "frontend", label: "◈ Frontend" },
+  { id: "backend", label: "⌘ Backend" },
+  { id: "architecture", label: "◇ Architecture" },
+  { id: "cloud", label: "☁ Cloud" },
+  { id: "leadership", label: "↗ Leadership" },
+  { id: "product", label: "✦ Produit" },
 ];
 
 function parseYear(year) {
-  const num = parseInt(year.replace(/[^\d-]/g, ""), 10);
-  return year.includes("apr.") ? num : -num;
+  return parseInt(year, 10);
 }
 
 function sortEvents(list) {
