@@ -61,11 +61,29 @@ export default function Home() {
         <div className="section-heading"><p className="section-label">02 / Projets sélectionnés</p><span>Une sélection récente — 2023 / 2025</span></div>
         <div className="project-grid">
           {projects.map((project) => (
-            <article className="project-card" key={project.number}>
-              <span className="project-number">{project.number}</span><div className={`project-art ${project.color}`}><span>{project.title.slice(0, 1)}</span></div>
-              <div className="project-content"><p className="project-type">{project.type}</p><h3>{project.title}</h3><p>{project.description}</p><div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div>
-              <a className="round-arrow" href="#contact" aria-label={`En savoir plus sur ${project.title}`}>↗</a>
-            </article>
+
+<div key={project.number} className="card bg-base-100 w-96 shadow-sm">
+  <span className="project-number">{project.number}</span>
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      alt="Shoes" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title">
+      Card Title
+      <div className="badge badge-secondary">NEW</div>
+    </h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div className="card-actions justify-end">
+      <div className="badge badge-outline">Fashion</div>
+      <div className="badge badge-outline">Products</div>
+    </div>
+  </div>
+</div>
+
+
+
           ))}
         </div>
       </section>
