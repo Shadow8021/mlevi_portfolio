@@ -48,7 +48,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-aside">
-          <div className="portrait-frame"><Image src="/image.jpeg" alt="Portrait de Lamine, développeur full-stack" fill priority sizes="(max-width: 720px) 80vw, 34vw" /></div>
+          <div className="portrait-frame"><Image src="/image.jpeg" alt="Portrait de Martial OYAGA, développeur full-stack" fill priority sizes="(max-width: 720px) 80vw, 34vw" /></div>
           <div className="portrait-note"><span>Based in</span><strong>Paris / Dakar</strong></div>
         </div>
         <div className="scroll-cue">Scroll to explore <span>↓</span></div>
@@ -57,7 +57,7 @@ export default function Home() {
       <section className="intro-band" id="about">
         <div className="section-wrap intro-grid">
           <p className="section-label">01 / À propos</p>
-          <div><h2>Du premier croquis à la mise en ligne.</h2><p className="large-copy">Je m&apos;appelle Lamine. J&apos;aime les problèmes complexes, les interfaces sans bruit et les équipes qui veulent faire les choses avec intention.</p></div>
+          <div><h2>Du premier croquis à la mise en ligne.</h2><p className="large-copy">Je m&apos;appelle Martial OYAGA. J&apos;aime les problèmes complexes, les interfaces sans bruit et les équipes qui veulent faire les choses avec intention.</p></div>
         </div>
       </section>
 

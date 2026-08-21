@@ -11,13 +11,13 @@ const CARD_FADE_MASK =
   "radial-gradient(ellipse 90% 110% at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.92) 40%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.4) 90%, rgba(0,0,0,0.15) 100%)";
 const socials=[{
   internal: false,
-  href: "https://www.linkedin.com/in/lamine-martial-oyaga/",
+  href: "https://www.linkedin.com/in/martial-oyaga/",
   label: "LinkedIn",
   lucideIcon: FaLinkedinIn  
 },
 {
   internal: false,
-  href: "https://www.facebook.com/lamine.martial.oyaga",
+  href: "https://www.facebook.com/martial.oyaga",
   label: "Facebook",
   lucideIcon: FaFacebookF
 },
@@ -85,7 +85,7 @@ export function ContactCard(): ReactNode {
                     2026 &copy; Built with Next.js
                   </p>
                   <p className="contact-card-meta-muted text-[12px] tracking-tight">
-                    By React Bits Pro
+                    By Martial OYAGA
                   </p>
                 </div>
               </div>
