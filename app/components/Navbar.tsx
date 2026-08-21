@@ -8,7 +8,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
     
   return (
-    <nav className="border-b sticky top-0 right-0 z-50 border-gray-600 bg-[#f3f0e9] w-full h-20">
+    <nav className="border-b sticky top-0 right-0 z-50 border-gray-600 bg-[#f3f0e9] w-full h-18">
       <Contenaire className="flex items-center justify-between py-5">
          <a className="logo" href="#top" aria-label="Retour en haut">LM<span>.</span></a>
         <div className={`nav-links ${menuOpen ? "is-open" : ""}`}>
