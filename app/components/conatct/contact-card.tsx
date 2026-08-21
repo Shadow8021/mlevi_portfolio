@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 import { ContactCardCtas } from "./contact-card-ctas";
-import { FadeIn } from "@/components/ui/motion-primitives";
+import { FadeIn } from "@/app/components/ui/motion-primitives";
 import { ShaderFlow } from "../shaders/shader-flow";
 
 const CARD_FADE_MASK =
