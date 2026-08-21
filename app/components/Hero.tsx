@@ -1,5 +1,4 @@
 import Contenaire from "./Contenaire"
-import Image from "next/image"
 export default function Hero() {
   return (
     <div className="bg-[#000420] h-screen text-white py-20">
