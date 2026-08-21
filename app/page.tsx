@@ -5,33 +5,7 @@ import { ContactCard } from "./components/conatct/contact-card";
 import Services from "./components/services";
 import NetworkAnimation from "./components/ui/anime";
 import TextType from "./components/ui/TextType";
-
-const projects = [
-  {
-    number: "01",
-    title: "Kora Market",
-    type: "E-commerce · Web app",
-    description: "Une expérience d'achat rapide pour les créateurs africains, pensée pour le mobile d'abord.",
-    tags: ["Next.js", "Stripe", "PostgreSQL"],
-    color: "coral",
-  },
-  {
-    number: "02",
-    title: "Fintrack",
-    type: "Fintech · Mobile app",
-    description: "Le tableau de bord qui rend les finances personnelles enfin lisibles et actionnables.",
-    tags: ["React Native", "Node.js", "AWS"],
-    color: "lime",
-  },
-  {
-    number: "03",
-    title: "Studio Noma",
-    type: "Creative studio · Website",
-    description: "Un site éditorial vivant pour une direction artistique qui ne tient pas dans une grille.",
-    tags: ["TypeScript", "GSAP", "Sanity"],
-    color: "lavender",
-  },
-];
+import Project from "./components/project";
 
 export default function Home() {
   
@@ -70,7 +44,7 @@ export default function Home() {
           </div>
           <div className="portrait-note">
             <span>Based in</span>
-            <strong>Paris / Dakar</strong>
+            <strong>Brazzaville / Congo</strong>
           </div>
         </div>
         <div className="scroll-cue">Scroll to explore <span>↓</span></div>
@@ -91,28 +65,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="work section-wrap" id="work">
-        <div className="section-heading"><p className="section-label">02 / Projets sélectionnés</p><span>Une sélection récente — 2023 / 2025</span></div>
-        <div className="project-grid">
-          {projects.map((project) => (
-            <div key={project.number} className="card shadow-sm">
-              <span className="project-number">{project.number}</span>
-              <figure className={`project-art ${project.color}`}>
-                <span>{project.title.slice(0, 1)}</span>
-              </figure>
-              <div className="card-body">
-                <div className="project-content">
-                    <p className="project-type">{project.type}</p>
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                    <div className="tags">{project.tags.map((tag) =>( 
-                    <span key={tag}>{tag}</span>))}
-                    </div>
-                  </div>
-              </div>
-            </div>
-          ))}
+      <section className="work section-wrap " id="work">
+        <div className="section-heading">
+          <p className="section-label">02 / Projets sélectionnés</p>
+          <span>Une sélection récente — 2023 / 2025</span>
         </div>
+         <Project/>
       </section>
 
       <section className="skills section-wrap" id="skills">
@@ -197,8 +155,9 @@ export default function Home() {
       </header>
 
       <Timeline />
-      
+     
     </div>
+    
     </main>
   );
 }
