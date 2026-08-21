@@ -1,7 +1,5 @@
 "use client";
-import Navbar from "./components/Navbar";
 import Image from "next/image";
-import { useState } from "react";
 
 const projects = [
   {
@@ -30,27 +28,11 @@ const projects = [
   },
 ];
 
-const navItems = ["Work", "Skills", "Services", "About", "Contact"];
-
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  
 
   return (
     <main>
-      <Navbar/>
-      <nav className="site-nav" aria-label="Navigation principale">
-        <a className="logo" href="#top" aria-label="Retour en haut">LM<span>.</span></a>
-        <div className={`nav-links ${menuOpen ? "is-open" : ""}`}>
-          {navItems.map((item) => (
-            <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{item}</a>
-          ))}
-        </div>
-        <a className="nav-cta" href="#contact">Discutons <span>↗</span></a>
-        <button className="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
-          <span /> <span />
-        </button>
-      </nav>
-
       <section className="hero section-wrap" id="top">
         <div className="hero-copy">
           <p className="eyebrow"><span className="status-dot" /> Disponible pour de nouveaux projets</p>
