@@ -1,5 +1,5 @@
 "use client";
-
+import Navbar from "./components/Navbar";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -37,6 +37,7 @@ export default function Home() {
 
   return (
     <main>
+      <Navbar/>
       <nav className="site-nav" aria-label="Navigation principale">
         <a className="logo" href="#top" aria-label="Retour en haut">LM<span>.</span></a>
         <div className={`nav-links ${menuOpen ? "is-open" : ""}`}>
