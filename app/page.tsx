@@ -49,8 +49,13 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-aside">
-          <div className="portrait-frame"><Image src="/image.jpeg" alt="Portrait de Martial OYAGA, développeur full-stack" fill priority sizes="(max-width: 720px) 80vw, 34vw" /></div>
-          <div className="portrait-note"><span>Based in</span><strong>Paris / Dakar</strong></div>
+          <div className="portrait-frame scale-100 bg-red-300 rounded-tl-[2.4rem] rounded-br-[2.4rem] overflow-hidden relative">
+            <Image src="/image.jpeg" alt="Portrait de Martial OYAGA, développeur full-stack" fill priority sizes="(max-width: 720px) 80vw, 34vw" />
+          </div>
+          <div className="portrait-note">
+            <span>Based in</span>
+            <strong>Paris / Dakar</strong>
+          </div>
         </div>
         <div className="scroll-cue">Scroll to explore <span>↓</span></div>
       </section>
