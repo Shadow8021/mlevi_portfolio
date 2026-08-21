@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #202320;
-  --paper: #f3f0e9;
-  --muted: #777a70;
-  --line: #d8d5cc;
-  --coral: #ef725d;
-  --lime: #d7ed67;
-  --lavender: #c9c3f0;
+  --ink: #1a1a2e;
+  --paper: #f5f0e6;
+  --muted: #a9a9a9;
+  --line: #404060;
+  --coral: #d4af37;
+  --lime: #c9a959;
+  --lavender: #8b7355;
+  --surface: #2d2d44;
+  --gold-soft: #c9a959;
 }
 
 * {
@@ -20,8 +22,8 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
   font-family: var(--font-geist-sans), sans-serif;
 }
 
@@ -42,6 +44,8 @@ a {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .logo {
@@ -74,11 +78,11 @@ a {
 }
 
 .nav-links a:hover {
-  color: var(--ink);
+  color: var(--paper);
 }
 
 .nav-cta {
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--gold-soft);
   padding-bottom: 5px;
 }
 
@@ -99,7 +103,7 @@ a {
   width: 22px;
   height: 1px;
   margin: 5px;
-  background: var(--ink);
+  background: var(--paper);
 }
 
 .hero {
@@ -157,7 +161,7 @@ h2 em {
 
 .hero-intro {
   max-width: 470px;
-  color: #61645b;
+  color: var(--muted);
   font-size: 1rem;
   line-height: 1.7;
 }
@@ -207,7 +211,7 @@ h2 em {
   aspect-ratio: .82;
   position: relative;
   overflow: hidden;
-  background: #c8b8a1;
+  background: var(--surface);
 }
 
 .portrait-frame img {
@@ -275,7 +279,7 @@ h2 em {
 }
 
 .large-copy {
-  color: #a4a69e;
+  color: var(--muted);
   max-width: 570px;
   font-size: 1.1rem;
   line-height: 1.7;
@@ -308,6 +312,8 @@ h2 em {
 }
 
 .project-card {
+  background: var(--surface);
+  color: var(--paper);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -371,6 +377,12 @@ h2 em {
   font-size: .9rem;
 }
 
+.project-content h3,
+.service-grid h3,
+.project-number {
+  color: var(--paper);
+}
+
 .tags {
   display: flex;
   gap: 8px;
@@ -380,7 +392,7 @@ h2 em {
 
 .tags span {
   border: 1px solid var(--line);
-  color: var(--muted);
+  color: var(--gold-soft);
   font-size: .65rem;
   padding: 5px 8px;
 }
@@ -397,7 +409,8 @@ h2 em {
   place-items: center;
   font-size: 1.1rem;
   transition: all .2s;
-  background: var(--paper);
+  background: var(--surface);
+  color: var(--paper);
 }
 
 .round-arrow:hover {
@@ -432,7 +445,7 @@ h2 em {
 }
 
 .skills-intro>p {
-  color: #a4a69e;
+  color: var(--muted);
   max-width: 350px;
   line-height: 1.7;
 }
@@ -458,14 +471,15 @@ h2 em {
 }
 
 .skill-group p {
-  color: #a4a69e;
+  color: var(--muted);
   font-size: .9rem;
   line-height: 1.6;
   margin: 0;
 }
 
 .services {
-  background: #e8e5dc;
+  background: var(--surface);
+  color: var(--paper);
   max-width: none;
   padding-inline: max(36px, calc((100% - 1180px) / 2));
 }
@@ -502,6 +516,21 @@ h2 em {
   color: var(--muted);
   line-height: 1.6;
   font-size: .88rem;
+}
+
+.project-grid .card {
+  width: 100%;
+  background-color: var(--surface);
+  color: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.project-grid .card>.project-number {
+  padding: 1.25rem 1.25rem 0;
+}
+
+.project-grid .card-body {
+  padding: 1.25rem;
 }
 
 .portrait-frame {
@@ -617,7 +646,7 @@ h2 em {
 .contact-email {
   font-family: var(--font-geist-mono), monospace;
   font-size: .88rem;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--gold-soft);
   padding-bottom: 9px;
 }
 
@@ -635,6 +664,11 @@ h2 em {
   font-size: .68rem;
   text-transform: uppercase;
   letter-spacing: .08em;
+}
+
+.contact {
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .socials {
@@ -926,6 +960,15 @@ h2 em {
       var(--line-color) 10%,
       var(--line-color) 90%,
       transparent 100%);
+}
+
+.timeline-shell {
+  background-color: var(--ink);
+  color: var(--paper);
+}
+
+.timeline-emblem {
+  color: #d4af37;
 }
 
 .bg-papyrus {

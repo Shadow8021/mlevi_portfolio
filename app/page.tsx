@@ -62,12 +62,10 @@ export default function Home() {
         <div className="project-grid">
           {projects.map((project) => (
 
-<div key={project.number} className="card bg-base-100 w-96 shadow-sm">
+<div key={project.number} className="card shadow-sm">
   <span className="project-number">{project.number}</span>
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-      alt="Shoes" />
+  <figure className={`project-art ${project.color}`}>
+    <span>{project.title.slice(0, 1)}</span>
   </figure>
   <div className="card-body">
     <div className="project-content">
@@ -133,7 +131,7 @@ export default function Home() {
               width="60"
               height="60"
               viewBox="0 0 60 60"
-              className="text-amber-400"
+              className="timeline-emblem"
               aria-hidden="true"
             >
               <circle
