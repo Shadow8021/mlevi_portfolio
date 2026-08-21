@@ -80,10 +80,10 @@ export default function Home() {
         <div className="section-wrap">
           <p className="section-label">01 / À propos</p>
           <div className="intro-layout flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between">
-            <div className="w-full  max-w-[560px] shrink-0">
+            <div className="w-full  max-w-140 shrink-0">
               <NetworkAnimation />
             </div>
-            <div className="flex-1  h-80 max-w-[620px]">
+            <div className="flex-1  h-80 max-w-155">
               <h2 className="text-6xl font-bold">Du premier croquis à la mise en ligne.</h2>
               <p className="large-copy">Je m&apos;appelle Martial OYAGA. J&apos;aime les problèmes complexes, les interfaces sans bruit et les équipes qui veulent faire les choses avec intention.</p>
             </div>
