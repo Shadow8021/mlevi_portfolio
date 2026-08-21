@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lamine M. — Développeur full-stack",
+  title: "G'Martial Oyaga — Développeur logiciel",
   description: "Portfolio de Lamine M., développeur full-stack web et mobile.",
 };
 

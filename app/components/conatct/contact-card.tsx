@@ -1,14 +1,40 @@
 import { Mail } from "lucide-react";
+import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-
 import { ContactCardCtas } from "./contact-card-ctas";
 import { FadeIn } from "@/app/components/ui/motion-primitives";
 import { ShaderFlow } from "../shaders/shader-flow";
 
 const CARD_FADE_MASK =
   "radial-gradient(ellipse 90% 110% at 50% 50%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.92) 40%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,0.4) 90%, rgba(0,0,0,0.15) 100%)";
+const socials=[{
+  internal: false,
+  href: "https://www.linkedin.com/in/lamine-martial-oyaga/",
+  label: "LinkedIn",
+  lucideIcon: FaLinkedinIn  
+},
+{
+  internal: false,
+  href: "https://www.facebook.com/lamine.martial.oyaga",
+  label: "Facebook",
+  lucideIcon: FaFacebookF
+},
+{
+  internal: false,
+  href: "mailto:hello@example.com",
+  label: "Email",
+  lucideIcon: Mail
+}
+]
+
+
+
+
+
+
+
 
 export function ContactCard(): ReactNode {
   return (
@@ -45,21 +71,14 @@ export function ContactCard(): ReactNode {
 
               <div className="contact-card-social-panel flex flex-col items-center justify-center gap-6 rounded-[1.1rem] border p-6 sm:p-8">
                 <div className="flex items-center gap-3 opacity-75">
-                  <SocialIcon
-                    href="mailto:hello@example.com"
-                    label="Email"
-                    lucideIcon={Mail}
-                  />
-                  <SocialIcon
-                    href="https://www.linkedin.com"
-                    label="LinkedIn"
-                    imageSrc="/linkedin.svg"
-                  />
-                  <SocialIcon
-                    href="https://x.com"
-                    label="X"
-                    imageSrc="/x.svg"
-                  />
+                  {socials.map((social) => (
+                    <SocialIcon
+                      key={social.label}
+                      href={social.href}
+                      label={social.label}
+                      lucideIcon={social.lucideIcon}
+                    />
+                  ))}
                 </div>
                 <div className="flex flex-col items-center gap-1 text-center">
                   <p className="contact-card-meta text-[13px] tracking-tight">
