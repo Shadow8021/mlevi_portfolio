@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="fr" class="h-full">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260821-05-d0038b4","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/50d846425a1e5082.telemetry_sdk.js" integrity="sha512-Otbex+ztlVbcEGql0rXGd/3E3ee/hqAntg6DeuUEMG6pIPbXGOSvZbFZVzknAXi1tH/itQ+ijEhOTr2aWj6CXg=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronologie des Civilisations Anciennes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/176239d78dc337f0.element_sdk.js" integrity="sha512-QC7TZpezTofrkWmJhkdnKO24kgkRY/EHV5cad+uwo8N4ozX9ri23FZJi6dkIeKf6YH+zcqWLm9sdXZ0HWhu7eg=="></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    .font-cinzel { font-family: 'Cinzel', serif; }
+    .font-crimson { font-family: 'Crimson Text', serif; }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 5px currentColor; }
+      50% { box-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+    }
+    
+    .animate-fade-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    .timeline-dot {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    .card-expand {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.4s ease-out;
+    }
+    
+    .card-content.expanded {
+      grid-template-rows: 1fr;
+    }
+    
+    .card-inner {
+      overflow: hidden;
+    }
+    
+    .civilization-filter.active {
+      transform: scale(1.05);
+    }
+    
+    .timeline-line {
+      background: linear-gradient(180deg, 
+        transparent 0%, 
+        var(--line-color) 10%, 
+        var(--line-color) 90%, 
+        transparent 100%
+      );
+    }
+
+    .bg-papyrus {
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/b3bf9e8ac58e6ad6.data_sdk.js" type="text/javascript" integrity="sha512-otc1u9NYq9Ms5Jt//7vmhrrqR5CLPr8Jdgs6741gqniClfLMcfmC+jK/cKuQdhLv6G0esJ/FzaMS9tv0T/vj/Q=="></script>
+ </head>
+ <body class="h-full">
+  <div id="app-wrapper" class="h-full w-full overflow-auto bg-papyrus" style="background-color: #1a1a2e;"><!-- Header -->
+   <header class="relative py-8 px-4 text-center">
+    <div class="absolute inset-0 overflow-hidden">
+     <div class="absolute top-0 left-1/4 w-32 h-32 rounded-full opacity-10" style="background: radial-gradient(circle, #d4af37 0%, transparent 70%);"></div>
+     <div class="absolute top-10 right-1/4 w-24 h-24 rounded-full opacity-10" style="background: radial-gradient(circle, #d4af37 0%, transparent 70%);"></div>
+    </div>
+    <div class="relative animate-fade-in" style="animation-delay: 0.1s;">
+     <div class="flex justify-center mb-4">
+      <svg width="60" height="60" viewbox="0 0 60 60" class="text-amber-400"><circle cx="30" cy="30" r="25" fill="none" stroke="currentColor" stroke-width="2" /> <path d="M30 10 L30 50 M10 30 L50 30" stroke="currentColor" stroke-width="1.5" opacity="0.5" /> <circle cx="30" cy="30" r="8" fill="currentColor" opacity="0.3" /> <circle cx="30" cy="30" r="3" fill="currentColor" />
+      </svg>
+     </div>
+     <h1 id="main-title" class="font-cinzel text-3xl md:text-4xl font-bold tracking-wider mb-2" style="color: #d4af37;">Civilisations Anciennes</h1>
+     <p id="subtitle" class="font-crimson text-lg italic" style="color: #c9a959;">3000 av. J.-C. — 500 apr. J.-C.</p>
+    </div>
+   </header><!-- Civilization Filters -->
+   <nav class="px-4 mb-8 animate-fade-in" style="animation-delay: 0.2s;">
+    <div class="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto"><button onclick="filterCivilization('all')" class="civilization-filter active px-4 py-2 rounded-full font-cinzel text-sm transition-all duration-300 hover:scale-105" data-civ="all" style="background-color: #2d2d44; color: #f5f0e6; border: 2px solid #d4af37;"> 🌍 Toutes </button> <button onclick="filterCivilization('egypt')" class="civilization-filter px-4 py-2 rounded-full font-cinzel text-sm transition-all duration-300 hover:scale-105" data-civ="egypt" style="background-color: #2d2d44; color: #f5f0e6; border: 2px solid transparent;"> 🏛️ Égypte </button> <button onclick="filterCivilization('greece')" class="civilization-filter px-4 py-2 rounded-full font-cinzel text-sm transition-all duration-300 hover:scale-105" data-civ="greece" style="background-color: #2d2d44; color: #f5f0e6; border: 2px solid transparent;"> 🏺 Grèce </button> <button onclick="filterCivilization('rome')" class="civilization-filter px-4 py-2 rounded-full font-cinzel text-sm transition-all duration-300 hover:scale-105" data-civ="rome" style="background-color: #2d2d44; color: #f5f0e6; border: 2px solid transparent;"> ⚔️ Rome </button>
+    </div>
+   </nav><!-- Timeline -->
+   <main class="relative px-4 pb-12"><!-- Timeline Line -->
+    <div class="timeline-line absolute left-1/2 transform -translate-x-1/2 w-1 h-full rounded-full" style="--line-color: #d4af37; opacity: 0.4;"></div>
+    <div id="timeline-container" class="relative max-w-4xl mx-auto space-y-8"><!-- Event Cards will be generated here -->
+    </div>
+   </main><!-- Footer -->
+   <footer class="py-6 text-center">
+    <p class="font-crimson text-sm" style="color: #8b7355;">📜 Cliquez sur les cartes pour découvrir plus de détails</p>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      timeline_title: "Civilisations Anciennes",
+      subtitle_text: "3000 av. J.-C. — 500 apr. J.-C.",
+      background_color: "#1a1a2e",
+      accent_color: "#d4af37",
+      text_color: "#f5f0e6",
+      card_color: "#2d2d44",
+      secondary_color: "#c9a959"
+    };
+
+    const events = [
+      {
+        id: 1,
+        year: "3000 av. J.-C.",
+        title: "Unification de l'Égypte",
+        civilization: "egypt",
+        emoji: "👑",
+        color: "#e6b422",
+        summary: "Le pharaon Narmer unifie la Haute et la Basse Égypte.",
+        details: "Cette unification marque le début de l'histoire dynastique égyptienne. Narmer, également connu sous le nom de Ménès, établit Memphis comme capitale. La palette de Narmer, découverte à Hiérakonpolis, illustre cette conquête historique.",
+        funFact: "🎯 Le saviez-vous ? Les pharaons portaient une double couronne symbolisant l'union des deux terres !"
+      },
+      {
+        id: 2,
+        year: "2560 av. J.-C.",
+        title: "Construction de la Grande Pyramide",
+        civilization: "egypt",
+        emoji: "🔺",
+        color: "#e6b422",
+        summary: "La pyramide de Khéops est érigée à Gizeh.",
+        details: "Construite pour le pharaon Khéops, cette pyramide mesure 146 mètres de haut et fut la plus haute structure du monde pendant plus de 3 800 ans. Elle est composée d'environ 2,3 millions de blocs de pierre.",
+        funFact: "🎯 Le saviez-vous ? On pourrait construire un mur de 3 mètres de haut autour de la France avec les pierres de la pyramide !"
+      },
+      {
+        id: 3,
+        year: "776 av. J.-C.",
+        title: "Premiers Jeux Olympiques",
+        civilization: "greece",
+        emoji: "🏅",
+        color: "#4a90a4",
+        summary: "Les premiers Jeux Olympiques sont organisés à Olympie.",
+        details: "Ces jeux étaient dédiés à Zeus et se tenaient tous les quatre ans. Les athlètes concouraient nus et seuls les hommes grecs libres pouvaient participer. Une trêve sacrée protégeait les participants pendant les jeux.",
+        funFact: "🎯 Le saviez-vous ? Les vainqueurs recevaient une couronne d'olivier, pas de médailles !"
+      },
+      {
+        id: 4,
+        year: "508 av. J.-C.",
+        title: "Naissance de la Démocratie",
+        civilization: "greece",
+        emoji: "🗳️",
+        color: "#4a90a4",
+        summary: "Clisthène établit la démocratie à Athènes.",
+        details: "Les citoyens athéniens pouvaient désormais voter directement sur les lois. L'Agora devint le centre de la vie politique. Cependant, seuls les hommes libres nés à Athènes étaient considérés comme citoyens.",
+        funFact: "🎯 Le saviez-vous ? Le mot 'démocratie' vient du grec 'demos' (peuple) et 'kratos' (pouvoir) !"
+      },
+      {
+        id: 5,
+        year: "753 av. J.-C.",
+        title: "Fondation de Rome",
+        civilization: "rome",
+        emoji: "🐺",
+        color: "#c0392b",
+        summary: "Selon la légende, Romulus fonde la ville de Rome.",
+        details: "La légende raconte que Romulus et Rémus, jumeaux abandonnés et allaités par une louve, fondèrent Rome. Romulus tua son frère lors d'une dispute et devint le premier roi de Rome.",
+        funFact: "🎯 Le saviez-vous ? La louve qui allaita les jumeaux s'appelait Luperca !"
+      },
+      {
+        id: 6,
+        year: "44 av. J.-C.",
+        title: "Assassinat de Jules César",
+        civilization: "rome",
+        emoji: "🗡️",
+        color: "#c0392b",
+        summary: "Jules César est assassiné aux Ides de Mars.",
+        details: "Poignardé 23 fois par des sénateurs romains, César mourut au pied de la statue de Pompée. Ses derniers mots auraient été 'Tu quoque, mi fili' (Toi aussi, mon fils) en voyant Brutus parmi ses assassins.",
+        funFact: "🎯 Le saviez-vous ? Le mois de juillet (July en anglais) porte le nom de Jules César !"
+      },
+      {
+        id: 7,
+        year: "27 av. J.-C.",
+        title: "Début de l'Empire Romain",
+        civilization: "rome",
+        emoji: "🦅",
+        color: "#c0392b",
+        summary: "Auguste devient le premier empereur romain.",
+        details: "Octave, petit-neveu de César, reçoit le titre d'Auguste du Sénat. Il instaure la Pax Romana, une période de paix relative qui durera plus de 200 ans. L'Empire s'étend de la Bretagne à l'Égypte.",
+        funFact: "🎯 Le saviez-vous ? Le mois d'août (August) est nommé en l'honneur d'Auguste !"
+      },
+      {
+        id: 8,
+        year: "331 av. J.-C.",
+        title: "Alexandre conquiert la Perse",
+        civilization: "greece",
+        emoji: "⚔️",
+        color: "#4a90a4",
+        summary: "Alexandre le Grand défait Darius III à Gaugamèles.",
+        details: "Cette victoire décisive permit à Alexandre de conquérir l'Empire perse. À seulement 25 ans, il contrôlait un territoire allant de la Grèce à l'Inde. Il fonda plus de 70 villes, dont Alexandrie en Égypte.",
+        funFact: "🎯 Le saviez-vous ? Alexandre n'a jamais perdu une seule bataille de toute sa vie !"
+      },
+      {
+        id: 9,
+        year: "1336 av. J.-C.",
+        title: "Règne de Toutânkhamon",
+        civilization: "egypt",
+        emoji: "😷",
+        color: "#e6b422",
+        summary: "Le jeune pharaon Toutânkhamon monte sur le trône.",
+        details: "Devenu pharaon à 9 ans, Toutânkhamon mourut mystérieusement à 19 ans. Sa tombe, découverte en 1922 par Howard Carter, contenait plus de 5 000 objets précieux, dont son célèbre masque funéraire en or.",
+        funFact: "🎯 Le saviez-vous ? La malédiction du pharaon serait responsable de la mort de plusieurs personnes ayant ouvert sa tombe !"
+      },
+      {
+        id: 10,
+        year: "476 apr. J.-C.",
+        title: "Chute de Rome",
+        civilization: "rome",
+        emoji: "🏚️",
+        color: "#c0392b",
+        summary: "Romulus Augustule, dernier empereur, est déposé.",
+        details: "Odoacre, chef des Hérules, dépose le jeune empereur et renvoie les insignes impériaux à Constantinople. Cet événement marque traditionnellement la fin de l'Antiquité et le début du Moyen Âge en Occident.",
+        funFact: "🎯 Le saviez-vous ? Le dernier empereur portait le même nom que le fondateur légendaire de Rome !"
+      }
+    ];
+
+    let currentFilter = 'all';
+    let expandedCards = new Set();
+
+    function sortEvents(events) {
+      return events.sort((a, b) => {
+        const parseYear = (yearStr) => {
+          const num = parseInt(yearStr.replace(/[^\d-]/g, ''));
+          return yearStr.includes('apr.') ? num : -num;
+        };
+        return parseYear(a.year) - parseYear(b.year);
+      });
+    }
+
+    function renderTimeline() {
+      const container = document.getElementById('timeline-container');
+      const sortedEvents = sortEvents([...events]);
+      const filteredEvents = currentFilter === 'all' 
+        ? sortedEvents 
+        : sortedEvents.filter(e => e.civilization === currentFilter);
+
+      container.innerHTML = filteredEvents.map((event, index) => {
+        const isLeft = index % 2 === 0;
+        const isExpanded = expandedCards.has(event.id);
+        
+        return `
+          <div class="event-card relative flex items-center ${isLeft ? 'flex-row' : 'flex-row-reverse'} animate-fade-in"
+               data-civilization="${event.civilization}"
+               style="animation-delay: ${index * 0.1}s;">
+            
+            <!-- Timeline Dot -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 z-10">
+              <div class="timeline-dot w-4 h-4 rounded-full border-2" 
+                   style="background-color: ${event.color}; border-color: ${event.color}; color: ${event.color};">
+              </div>
+            </div>
+
+            <!-- Date Badge -->
+            <div class="w-5/12 ${isLeft ? 'text-right pr-8' : 'text-left pl-8'}">
+              <span class="inline-block px-3 py-1 rounded-full font-cinzel text-xs font-semibold"
+                    style="background-color: ${event.color}20; color: ${event.color}; border: 1px solid ${event.color}40;">
+                ${event.year}
+              </span>
+            </div>
+
+            <!-- Card -->
+            <div class="w-5/12 ${isLeft ? 'pl-8' : 'pr-8'}">
+              <div class="card-expand rounded-xl p-4 cursor-pointer transform hover:scale-102 hover:-translate-y-1"
+                   style="background-color: #2d2d44; border-left: 4px solid ${event.color}; box-shadow: 0 4px 20px rgba(0,0,0,0.3);"
+                   onclick="toggleCard(${event.id})">
+                
+                <!-- Card Header -->
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl">${event.emoji}</span>
+                  <div class="flex-1">
+                    <h3 class="font-cinzel font-semibold text-base" style="color: #f5f0e6;">
+                      ${event.title}
+                    </h3>
+                    <p class="font-crimson text-sm mt-1" style="color: #a9a9a9;">
+                      ${event.summary}
+                    </p>
+                  </div>
+                  <span class="transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}" 
+                        style="color: ${event.color};">
+                    ▼
+                  </span>
+                </div>
+
+                <!-- Expandable Content -->
+                <div class="card-content ${isExpanded ? 'expanded' : ''}">
+                  <div class="card-inner">
+                    <div class="mt-4 pt-4" style="border-top: 1px solid #404060;">
+                      <p class="font-crimson text-sm leading-relaxed" style="color: #d0d0d0;">
+                        ${event.details}
+                      </p>
+                      <div class="mt-3 p-3 rounded-lg" style="background-color: ${event.color}15;">
+                        <p class="font-crimson text-sm italic" style="color: ${event.color};">
+                          ${event.funFact}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleCard(id) {
+      if (expandedCards.has(id)) {
+        expandedCards.delete(id);
+      } else {
+        expandedCards.add(id);
+      }
+      renderTimeline();
+    }
+
+    function filterCivilization(civ) {
+      currentFilter = civ;
+      
+      document.querySelectorAll('.civilization-filter').forEach(btn => {
+        const isActive = btn.dataset.civ === civ;
+        btn.classList.toggle('active', isActive);
+        btn.style.borderColor = isActive ? '#d4af37' : 'transparent';
+      });
+
+      renderTimeline();
+    }
+
+    async function onConfigChange(config) {
+      const title = config.timeline_title || defaultConfig.timeline_title;
+      const subtitle = config.subtitle_text || defaultConfig.subtitle_text;
+      
+      document.getElementById('main-title').textContent = title;
+      document.getElementById('subtitle').textContent = subtitle;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.card_color || defaultConfig.card_color,
+            set: (value) => {
+              config.card_color = value;
+              window.elementSdk.setConfig({ card_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              window.elementSdk.setConfig({ accent_color: value });
+            }
+          },
+          {
+            get: () => config.secondary_color || defaultConfig.secondary_color,
+            set: (value) => {
+              config.secondary_color = value;
+              window.elementSdk.setConfig({ secondary_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || 'Cinzel',
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || 16,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["timeline_title", config.timeline_title || defaultConfig.timeline_title],
+        ["subtitle_text", config.subtitle_text || defaultConfig.subtitle_text]
+      ]);
+    }
+
+    // Initialize
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange,
+      mapToCapabilities,
+      mapToEditPanelValues
+    });
+
+    renderTimeline();
+  </script>
+ </body>
+</html>
