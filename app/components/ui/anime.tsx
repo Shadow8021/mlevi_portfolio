@@ -13,12 +13,12 @@ const nodes = [
 
 export default function NetworkAnimation() {
   return (
-    <section className="relative flex h-[420px] w-full items-center justify-center overflow-hidden bg-[#07070a]">
+    <section className="relative mx-auto flex h-[260px] w-full max-w-[560px] items-center justify-center overflow-hidden sm:h-[300px] lg:h-[340px]">
       
       {/* Halo général */}
-      <div className="absolute left-1/2 top-1/2 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-700/10 blur-[80px]" />
+      <div className="absolute left-1/2 top-1/2 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-700/10 blur-[80px] sm:h-[260px] sm:w-[260px]" />
 
-      <div className="relative aspect-[804/420] w-full max-w-[804px]">
+      <div className="relative h-full w-full max-w-[520px]">
 
         {/* =========================
             CONNEXIONS
@@ -84,7 +84,7 @@ export default function NetworkAnimation() {
           <div className="absolute inset-[-45px] rounded-[35px] bg-violet-700/20 blur-[35px]" />
 
           {/* Bloc central */}
-          <div className="central-card relative flex h-[120px] w-[120px] items-center justify-center rounded-[27px] border border-violet-600 bg-[#09090d] shadow-[0_0_35px_rgba(109,40,217,0.35)]">
+          <div className="central-card relative flex h-[110px] w-[110px] items-center justify-center rounded-[27px] border border-violet-600 bg-[#09090d] shadow-[0_0_35px_rgba(109,40,217,0.35)] sm:h-[120px] sm:w-[120px]">
             
             {/* Icon Layers */}
             <svg

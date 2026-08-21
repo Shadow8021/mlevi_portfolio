@@ -56,9 +56,17 @@ export default function Home() {
       </section>
 
       <section className="intro-band" id="about">
-        <div className="section-wrap intro-grid">
+        <div className="section-wrap">
           <p className="section-label">01 / À propos</p>
-          <div><h2>Du premier croquis à la mise en ligne.</h2><p className="large-copy">Je m&apos;appelle Martial OYAGA. J&apos;aime les problèmes complexes, les interfaces sans bruit et les équipes qui veulent faire les choses avec intention.</p></div>
+          <div className="intro-layout flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between">
+            <div className="w-full  max-w-[560px] shrink-0">
+              <NetworkAnimation />
+            </div>
+            <div className="flex-1  h-80 max-w-[620px]">
+              <h2 className="text-6xl font-bold">Du premier croquis à la mise en ligne.</h2>
+              <p className="large-copy">Je m&apos;appelle Martial OYAGA. J&apos;aime les problèmes complexes, les interfaces sans bruit et les équipes qui veulent faire les choses avec intention.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -99,13 +107,8 @@ export default function Home() {
         <p className="section-label">05 / Contact</p>
         <ContactCard/>
       </section>
-      
-      
-      
-      
-      
-      
-      
+
+
       <div className="min-h-screen w-full overflow-auto bg-papyrus" style={{ backgroundColor: "#1a1a2e" }}>
       <header className="relative px-4 py-8 text-center">
         <div className="absolute inset-0 overflow-hidden">
@@ -173,7 +176,7 @@ export default function Home() {
       </header>
 
       <Timeline />
-      <NetworkAnimation />
+      
     </div>
     </main>
   );
