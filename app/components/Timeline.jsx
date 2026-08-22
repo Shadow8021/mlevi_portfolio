@@ -29,9 +29,9 @@ function TimelineCard({ event, index, expanded, onToggle }) {
       }`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      <div className="absolute left-1/2 z-10 -translate-x-1/2">
+      <div className="absolute left-1/2 z-10 -translate-x-1/2 ">
         <div
-          className="timeline-dot h-4 w-4 rounded-full border-2"
+          className={expanded ? "hidden translate-1.5": `timeline-dot h-3 w-3 rounded-full border-2`}
           style={{
             backgroundColor: event.color,
             borderColor: event.color,
@@ -57,7 +57,7 @@ function TimelineCard({ event, index, expanded, onToggle }) {
         </span>
       </div>
 
-      <div className={`w-5/12 ${isLeft ? "pl-8" : "pr-8"}`}>
+      <div className={`w-5/10 ${isLeft ? "pl-8" : "pr-8"}`}>
         <button
           type="button"
           onClick={() => onToggle(event.id)}
@@ -69,7 +69,7 @@ function TimelineCard({ event, index, expanded, onToggle }) {
           }}
           aria-expanded={expanded}
         >
-          <div className="flex items-start gap-3">
+          <div className="flex items-start gap-3 ">
             <span className="text-2xl">{event.emoji}</span>
 
             <div className="flex-1">
@@ -150,7 +150,7 @@ export default function Timeline() {
   return (
     <>
       <nav className="mb-8 px-4 animate-fade-in">
-        <div className="mx-auto flex max-w-2xl flex-wrap justify-center gap-3">
+        <div className="mx-auto flex max-w-3xl flex-wrap justify-center gap-3 ">
           {filters.map((item) => {
             const active = filter === item.id;
 
