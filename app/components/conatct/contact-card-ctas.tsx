@@ -24,7 +24,7 @@ export function ContactCardCtas(): ReactNode {
           transition={{ layout: { duration: 0.55, ease: EASE } }}
         >
           <Link
-            href="/projects"
+            href="#projects"
             className="contact-card-secondary-cta focus-ring group inline-flex cursor-pointer items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-medium shadow-md/2 transition-colors"
           >
             See projects
